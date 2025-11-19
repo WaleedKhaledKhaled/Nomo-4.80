@@ -1,0 +1,12 @@
+﻿{
+  "Group": "Nop-Station",
+  "FriendlyName": "Nop-Station Deal Of The Days",
+  "SystemName": "NopStation.Plugin.Widgets.DealOfTheDays",
+  "Version": "4.80.1.0",
+  "SupportedVersions": [ "4.80" ],
+  "Author": "Nop-Station Team",
+  "DisplayOrder": 1,
+  "FileName": "NopStation.Plugin.Widgets.DealOfTheDays.dll",
+  "Description": "This plugin allows to display deal of the day on public store.",
+  "DependsOnSystemNames": [ "NopStation.Core" ]
+}

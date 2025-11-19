@@ -1,0 +1,12 @@
+﻿{
+  "Group": "Nop-Station",
+  "FriendlyName": "Nop-Station BeautyShop Theme",
+  "SystemName": "NopStation.Theme.BeautyShop",
+  "Version": "4.80.1.0",
+  "SupportedVersions": [ "4.80" ],
+  "Author": "Nop-Station Team",
+  "DisplayOrder": 1,
+  "FileName": "NopStation.Plugin.Theme.BeautyShop.dll",
+  "Description": "This plugin allows to configure NopStation BeautyShop theme.",
+  "DependsOnSystemNames": [ "NopStation.Core" ]
+}

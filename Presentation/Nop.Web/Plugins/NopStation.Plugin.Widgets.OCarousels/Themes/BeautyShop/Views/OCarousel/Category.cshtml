@@ -1,0 +1,59 @@
+﻿@model OCarouselModel
+
+@if (Model.Categories.Count > 0)
+{
+    <div class="owl-carousel ocarousel @Model.CustomCssClass" id="category-ocarousel-@(Model.Id)">
+        @foreach (var categoryModel in Model.Categories)
+        {
+            <div class="ocarousel-item">
+                <a href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })" title="@categoryModel.PictureModel.Title">
+                    <img alt="@categoryModel.PictureModel.AlternateText" src="@categoryModel.PictureModel.ImageUrl" title="@categoryModel.PictureModel.Title" />
+                </a>
+                <div class="category-name">
+                    <a class="beautyShop-secondery-color-text beautyShop-medium-title" href="@Url.RouteUrl("Category", new {SeName = categoryModel.SeName})">@categoryModel.Name</a>
+                    <a class="shop-now" href="@Url.RouteUrl("Category", new { sename = categoryModel.SeName })">@T("shop.now")</a>
+                </div>
+            </div>
+        }
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('#category-ocarousel-@(Model.Id)').owlCarousel({
+                nav: @Model.Nav.ToString().ToLower(),
+                loop: @Model.Loop.ToString().ToLower(),
+                dots: true,
+                center: true,
+                margin: 10,
+                autoplay: @Model.AutoPlay.ToString().ToLower(),
+                rtl: @Model.RTL.ToString().ToLower(),
+                autoplayTimeout: @Model.AutoPlayTimeout,
+                autoplayHoverPause: @Model.AutoPlayHoverPause.ToString().ToLower(),
+                lazyLoad: @Model.LazyLoad.ToString().ToLower(),
+                lazyLoadEager: @Model.LazyLoadEager,
+                center: @Model.Center.ToString().ToLower(),
+                startPosition: @Model.StartPosition,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    576: {
+                        items: 2
+                    },
+                    768: {
+                        items: 2
+                    },
+                    992: {
+                        items: 3
+                    },
+                    1200: {
+                        items: 3
+                    },
+                    1500: {
+                        items: 3
+                    }
+                }
+            });
+        })
+    </script>
+}
